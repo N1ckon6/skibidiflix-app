@@ -5,7 +5,7 @@ import { IoIosSearch } from "react-icons/io";
 import { TbBellRinging } from "react-icons/tb";
 import profileImage from "../assets/ProfileImage.png";
 import { GoTriangleDown } from "react-icons/go";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Header = () => {
   const [bgColor, setBgColor] = useState("transparent");
@@ -21,10 +21,10 @@ const Header = () => {
 
   return (
     <div
-      className={`w-full h-[70px] bg-${bgColor} static flex justify-between select-none transition-all duration-500`}
+      className={`w-full h-[70px] bg-${bgColor} fixed flex justify-between select-none transition-all duration-500 z-30`}
     >
       <div className="h-full flex">
-        <div className="h-full flex justify-center items-center ps-14 scroll-">
+        <div className="h-full flex justify-center items-center ps-14">
           <Link to="/">
             <img src={logo} className="w-[150px]" />
           </Link>
